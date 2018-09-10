@@ -10,7 +10,7 @@
 
 下面是 getInfoSync 方法的信息：
 
-```shell
+```json
 {
   "server_version": "2ad41277",
   "chain_id": "6aa7bd33b6b45192465afa3553dedb531acaaff8928cf64b70bd4c5e49b7ec6a",
@@ -47,7 +47,7 @@
 
 当前（最近的）区块 ID、产生时间、打包此区块的节点
 
-*  **last_irreversible_block_num**、**last_irreversible_block_id**
+* **last_irreversible_block_num**、**last_irreversible_block_id**
 
 当前（最近的）不可逆区块高度、不可逆区块 ID
 
@@ -92,7 +92,7 @@ console.log(fibos.getBlockSync(blockNum));
 
 运行该文件，输出结果如下：
 
-```shell
+```json
 {
   "timestamp": "2018-08-28T00:00:00.000",
   "producer": "",

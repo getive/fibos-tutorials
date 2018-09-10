@@ -36,7 +36,7 @@ console.log(fibos.getAccountSync(accountName));
 
 运行该文件，输出结果如下：
 
-```shell
+```json
 {
   "account_name": "xiangmafibos",
   "head_block_num": 1883258,

@@ -38,7 +38,7 @@ console.log(fibos.getProducersSync(true, '', 5));
 
 运行该文件，输出结果如下：
 
-```shell
+```json
 {
   "rows": [
     {
@@ -217,7 +217,7 @@ print_r(json_decode($result, true));
 
 需注意的是，如果我们对 json 参数传值 false （默认值 ）时，输出的节点信息是不可读的二进制字符串：
 
-```
+```json
 {
   "rows": [
 	"30d5719f4a4c8f5b4bbfadfe5f68944300031a2b5cb185e7df91a697044fcf970d2045a3a060a693aadd7d5cffd23619b42c0119687474703a2f2f7777772e6d6f6361706974616c2e746f702f88530000802fcc2a3e7505000100",

@@ -30,10 +30,15 @@ FIBOS 中的 fibos.js 是 FIBOS 的 JavaScript 客户端库，它用于与 FIBOS
 
 可以看到，调用 fibos.js 中的同步方法是非常简单明了的，通常只需将一个包含 FIBOS 链ID、公网 RPC 网址的配置（config）对象作为参数传给 FIBOSJS，然后在返回的客户端对象 fibos 上调用 getInfoSync 方法即可。
 
-运行该文件，输出结果如下：
+运行该文件:
 
 ```shell
     $ fibos get_info1.js
+```
+
+输出结果如下：
+
+```json
     {
       "server_version": "2ad41277",
       "chain_id": "6aa7bd33b6b45192465afa3553dedb531acaaff8928cf64b70bd4c5e49b7ec6a",
