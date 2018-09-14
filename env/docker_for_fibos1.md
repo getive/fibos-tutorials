@@ -25,7 +25,7 @@
 
 这么火又惊的项目，咱肯定要学啊。好，现在开始进入正题，让我们看看如何用 Docker 搭建 FIBOS 开发环境，本文假定你已经安装好了 Docker，并对其有所了解。
 
-####首先是获取合适的镜像，这里我们选择最新稳定版的 Ubuntu 镜像。
+#### 首先是获取合适的镜像，这里我们选择最新稳定版的 Ubuntu 镜像。
 
 ```
 ➜  ~ docker pull ubuntu:latest
@@ -44,7 +44,7 @@ Digest: sha256:3f119dc0737f57f704ebecac8a6d8477b0f6ca1ca0332c7ee1395ed2c6a82be7
 Status: Downloaded newer image for ubuntu:latest
 ```
 
-####在将镜像下载回本机后，我们就可以创建并运行基于该镜像的容器了，在下面的命令行中我们指定容器名为 fibos 以方便之后引用该容器。
+#### 在将镜像下载回本机后，我们就可以创建并运行基于该镜像的容器了，在下面的命令行中我们指定容器名为 fibos 以方便之后引用该容器。
 
 ```
 ➜  ~ docker run -it --name fibos ubuntu:latest
@@ -79,7 +79,7 @@ Running hooks in /etc/ca-certificates/update.d...
 done.
 ```
 
-####到这里，我们的准备工作就做完了，接下来就可照官网文档，安装 FIBOS 运行环境和运行示例啦。
+#### 到这里，我们的准备工作就做完了，接下来就可照官网文档，安装 FIBOS 运行环境和运行示例啦。
 
 ```
 root@b90ce45b3ff6:/# curl -s https://fibos.io/download/installer.sh | sh

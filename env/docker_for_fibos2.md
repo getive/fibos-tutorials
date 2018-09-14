@@ -49,7 +49,7 @@ myfibos/
     └── ...
 ```
 
-###使用 Dockerfile 定制镜像
+### 使用 Dockerfile 定制镜像
 
 定制镜像的好处在于我们可以把准备工作（更新包索引并安装必要的工具和库，安装 FIBOS 运行环境）放入 Dockerfile 文件，依此构建出我们自己的镜像，之后基于该镜像创建新容器时就不用每次都要执行准备工作了。
 
@@ -96,7 +96,7 @@ Successfully tagged ubuntu:fibos
 fibos
 ```
 
-###创建并运行基于该镜像的容器
+### 创建并运行基于该镜像的容器
 
 好，现在我们可以用下面的命令创建并运行基于 `ubuntu:fibos` 镜像的容器了，通过 `-dt` 参数选项指定容器在后台运行，通过 `--name` 选项参数指定容器名为 `fibos` 以方便以后引用该容器，通过 `--mount type=bind,source=$HOME/myfibos,target=/myfibos` 绑定我们的主机目录 `myfibos` 至容器。因为 FIBOS 的配置及数据目录默认分别为 `/root/.local/share/eosio/nodeos/config` 和 `/root/.local/share/eosio/nodeos/data`，所以我们通过 `--mount source=fibos,target=/root/.local/share/eosio/nodeos` 指定这两个目录的父目录挂载至数据卷。
 
@@ -155,11 +155,11 @@ root@cd04a12cc67f:/#
 
 可以看到，FIBOS 运行环境已是开箱即用的。
 
-###运行示例代码
+### 运行示例代码
 
 由于我们在创建容器时挂载了主机中的 `myfibos` 目录到了容器中，所以我们可以直接运行来自官网的示例代码了。
 
-######1. 运行官网开发指南《搭建一个 FIBOS 开发环境》中的示例代码
+###### 1. 运行官网开发指南《搭建一个 FIBOS 开发环境》中的示例代码
 
 ```
 root@cd04a12cc67f:/# cd /myfibos/samples/hello_fibos/start_fibos
@@ -170,7 +170,7 @@ root@cd04a12cc67f:/myfibos/samples/hello_fibos/start_fibos# fibos node.js
 
 由于其它示例代码是需要这个 FIBOS 节点服务处在开启（运行）状态下，所以我们要在主机中新开一个终端窗口，然后通过 `docker exec -it fibos bash` 命令进入容器来执行其它示例代码。
 
-######2. 运行官网开发指南《使用 fibos.js 与 FIBOS 交互》中的示例代码
+###### 2. 运行官网开发指南《使用 fibos.js 与 FIBOS 交互》中的示例代码
 
 *初始化环境*
 
@@ -195,9 +195,9 @@ root@cd04a12cc67f:/....../fibos_client# fibos client.js
 
 （略）
 
-###其它相关 Docker 命令
+### 其它相关 Docker 命令
 
-#####停止容器运行
+##### 停止容器运行
 
 在容器终端命令行状态下，输入 `exit` 命令退出容器后，如果不再需要容器运行，可停止其运行。
 
@@ -205,19 +205,19 @@ root@cd04a12cc67f:/....../fibos_client# fibos client.js
 ➜  ~ myfibos docker container stop fibos
 ```
 
-#####重启容器
+##### 重启容器
 
 ```bash
 ➜  ~ myfibos docker container start fibos
 ```
 
-#####删除容器
+##### 删除容器
 
 ```bash
 ➜  ~ docker container rm fibos
 ```
 
-###至此，我们用 Docker 搭建 FIBOS 开发、运行、测试环境的工作算是完成了，接下来就看大家八仙过海，各显神通了。
+### 至此，我们用 Docker 搭建 FIBOS 开发、运行、测试环境的工作算是完成了，接下来就看大家八仙过海，各显神通了。
 
 ------
 
